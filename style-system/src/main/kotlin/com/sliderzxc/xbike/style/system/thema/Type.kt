@@ -1,4 +1,4 @@
-package com.sliderzxc.xbike.ui.theme
+package com.sliderzxc.xbike.style.system.thema
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

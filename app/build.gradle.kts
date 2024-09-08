@@ -42,4 +42,7 @@ dependencies {
     implementation(platform(libs.compose.bom))
     implementation(libs.compose.activity)
     implementation(libs.compose.material3)
+    // Modules
+    implementation(projects.styleSystem)
+    implementation(projects.navigation)
 }
