@@ -25,3 +25,4 @@ include(":app")
 
 include(":foundation")
 include(":style-system")
+include(":navigation")

@@ -21,10 +21,13 @@ class ComposeLibraryConventionsPlugin : Plugin<Project> {
             }
 
             extensions.configure(CommonExtension::class.java) {
-                compileSdk = libs.findVersion("compileSdk").get().toString().toInt()
+                val compileSdkVersion = libs.findVersion("compileSdk").get().toString().toInt()
+                val composeCompilerVersion = libs.findVersion("jetpackComposeCompilerVersion").get()
+
+                compileSdk = compileSdkVersion
                 namespace = "com.sliderzxc.xbike.plugins.compose"
                 buildFeatures.compose = true
-                composeOptions.kotlinCompilerExtensionVersion = "1.5.15"
+                composeOptions.kotlinCompilerExtensionVersion = composeCompilerVersion.toString()
             }
         }
     }
