@@ -23,6 +23,17 @@ includeBuild("build-conventions")
 
 include(":app")
 
-include(":foundation")
 include(":style-system")
 include(":navigation")
+
+include(
+    "sdk:firebase"
+)
+
+include(
+    ":foundation:mvi"
+)
+
+include(
+    ":feature:splash:presentation",
+)

@@ -42,5 +42,10 @@ gradlePlugin {
             id = "com.sliderzxc.xbike.plugins.compose.library"
             implementationClass = "ComposeLibraryConventionsPlugin"
         }
+
+        register("androidLibraryPlugin") {
+            id = "com.sliderzxc.xbike.plugins.android.library"
+            implementationClass = "AndroidLibraryConventionsPlugin"
+        }
     }
 }
