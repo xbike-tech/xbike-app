@@ -1,7 +1,9 @@
 package com.sliderzxc.xbike.feature.splash.presentation.mvi
 
-import com.sliderzxc.xbike.feature.splash.presentation.mvi.StartupScreenMVIComponent.*
 import com.arkivanov.decompose.ComponentContext
+import com.sliderzxc.xbike.feature.splash.presentation.mvi.StartupScreenMVIComponent.Action
+import com.sliderzxc.xbike.feature.splash.presentation.mvi.StartupScreenMVIComponent.Intent
+import com.sliderzxc.xbike.feature.splash.presentation.mvi.StartupScreenMVIComponent.State
 import com.sliderzxc.xbike.foundation.mvi.MVI
 import pro.respawn.flowmvi.api.MVIAction
 import pro.respawn.flowmvi.api.MVIIntent

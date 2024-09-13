@@ -1,5 +1,6 @@
 import com.android.build.api.dsl.CommonExtension
 import com.sliderzxc.xbike.plugins.configuration.libs
+import org.gradle.api.JavaVersion
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 
@@ -28,6 +29,11 @@ class ComposeLibraryConventionsPlugin : Plugin<Project> {
                 namespace = "com.sliderzxc.xbike.plugins.compose"
                 buildFeatures.compose = true
                 composeOptions.kotlinCompilerExtensionVersion = composeCompilerVersion.toString()
+
+                compileOptions {
+                    sourceCompatibility = JavaVersion.VERSION_21
+                    targetCompatibility = JavaVersion.VERSION_21
+                }
             }
         }
     }

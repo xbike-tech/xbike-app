@@ -1,4 +1,4 @@
-package com.sliderzxc.xbike.sdk.firebase
+package com.sliderzxc.xbike
 
 import android.content.Context
 import android.util.Log

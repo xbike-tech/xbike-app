@@ -7,12 +7,12 @@ plugins {
 
 android {
     namespace = "com.sliderzxc.xbike"
-    compileSdk = 34
+    compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
         applicationId = "com.sliderzxc.xbike"
-        minSdk = 24
-        targetSdk = 34
+        minSdk = libs.versions.minSdk.get().toInt()
+        targetSdk = libs.versions.targetSdk.get().toInt()
         versionCode = 1
         versionName = "1.0"
 
@@ -30,11 +30,11 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_19
-        targetCompatibility = JavaVersion.VERSION_19
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
 
-    kotlinOptions.jvmTarget = "19"
+    kotlinOptions.jvmTarget = "21"
     buildFeatures.compose = true
 }
 
@@ -48,4 +48,10 @@ dependencies {
     // Modules
     implementation(projects.styleSystem)
     implementation(projects.navigation)
+    implementation(projects.sdk.firebase)
+
+    implementation(libs.firebase.auth)
+    implementation("androidx.credentials:credentials:1.5.0-alpha05")
+    implementation("androidx.credentials:credentials-play-services-auth:1.5.0-alpha05")
+    implementation("com.google.android.libraries.identity.googleid:googleid:1.1.1")
 }

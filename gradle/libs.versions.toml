@@ -1,7 +1,7 @@
 [versions]
 # Libraries
 kotlin = "2.0.20"
-agp = "8.5.0"
+agp = "8.6.0"
 androix-core = "1.13.1"
 activity-compose = "1.9.2"
 compose-bom = "2024.09.00"
@@ -9,7 +9,7 @@ navigation-compose = "2.8.0"
 jetbrainsCompose = "1.6.0"
 kotlinx-coroutines = "1.8.1"
 compose-systemuicontroller = "0.36.0"
-kotlinx-serialization = "1.6.3"
+kotlinx-serialization = "1.7.1"
 androidx-lifecycle = "2.8.5"
 koin = "3.5.6"
 koin-annotations = "1.3.1"
@@ -21,9 +21,10 @@ firebase-bom = "33.2.0"
 # Config
 androidComposeVersion = "2.8.5"
 jetpackComposeCompilerVersion = "1.5.15"
-compileSdk = "34"
-targetSdk = "34"
+compileSdk = "35"
+targetSdk = "35"
 minSdk = "24"
+googleid = "1.1.1"
 
 [libraries]
 # AndroidX
@@ -62,7 +63,7 @@ koin-compose = { module = "io.insert-koin:koin-compose", version.require = "1.1.
 
 # Firebase
 firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebase-bom" }
-firebase-auth = { group = "com.google.firebase", name = "firebase-auth" }
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth-ktx" }
 
 # Decompose
 decompose = { module = "com.arkivanov.decompose:decompose", version.ref = "decompose" }
@@ -82,6 +83,7 @@ flowmvi-view = { module = "pro.respawn.flowmvi:android-view", version.ref = "flo
 flowmvi-savedstate = { module = "pro.respawn.flowmvi:savedstate", version.ref = "flowmvi" }
 # Remote debugging client
 flowmvi-debugger-client = { module = "pro.respawn.flowmvi:debugger-plugin", version.ref = "flowmvi" }
+googleid = { group = "com.google.android.libraries.identity.googleid", name = "googleid", version.ref = "googleid" }
 
 [plugins]
 # Build Conventions
