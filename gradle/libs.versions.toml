@@ -18,13 +18,16 @@ decompose = "3.0.0"
 flowmvi = "3.0.0"
 google-services = "4.4.2"
 firebase-bom = "33.2.0"
+supabase = "2.6.1"
+google-identity = "1.1.1"
+androidx-credentials = "1.5.0-alpha05"
+
 # Config
 androidComposeVersion = "2.8.5"
 jetpackComposeCompilerVersion = "1.5.15"
 compileSdk = "35"
 targetSdk = "35"
 minSdk = "24"
-googleid = "1.1.1"
 
 [libraries]
 # AndroidX
@@ -71,19 +74,23 @@ decompose-jetbrains-compose = { module = "com.arkivanov.decompose:extensions-com
 
 # FlowMVI
 flowmvi-core = { module = "pro.respawn.flowmvi:core", version.ref = "flowmvi" }
-# Test DSL
 flowmvi-test = { module = "pro.respawn.flowmvi:test", version.ref = "flowmvi" }
-# Compose multiplatform
 flowmvi-compose = { module = "pro.respawn.flowmvi:compose", version.ref = "flowmvi" }
-# Common android
 flowmvi-android = { module = "pro.respawn.flowmvi:android", version.ref = "flowmvi" }
-# View-based android
 flowmvi-view = { module = "pro.respawn.flowmvi:android-view", version.ref = "flowmvi" }
-# Multiplatform state preservation
 flowmvi-savedstate = { module = "pro.respawn.flowmvi:savedstate", version.ref = "flowmvi" }
-# Remote debugging client
 flowmvi-debugger-client = { module = "pro.respawn.flowmvi:debugger-plugin", version.ref = "flowmvi" }
-googleid = { group = "com.google.android.libraries.identity.googleid", name = "googleid", version.ref = "googleid" }
+
+# Google
+google-identity = { group = "com.google.android.libraries.identity.googleid", name = "googleid", version.ref = "google-identity" }
+
+# Supabase
+supabase-bom = { group = "io.github.jan-tennert.supabase", name = "bom", version.ref = "supabase" }
+supabase-auth = { group = "io.github.jan-tennert.supabase", name = "compose-auth" }
+
+# AndroidX Credentials
+androidx-credentials = { group = "androidx.credentials", name = "credentials", version = "androidx-credentials" }
+androidx-credentials-auth = { group = "androidx.credentials", name = "credentials-play-services-auth", version = "androidx-credentials" }
 
 [plugins]
 # Build Conventions

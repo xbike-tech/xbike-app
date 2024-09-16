@@ -27,7 +27,7 @@ include(":style-system")
 include(":navigation")
 
 include(
-    "sdk:firebase"
+    "sdk:google"
 )
 
 include(

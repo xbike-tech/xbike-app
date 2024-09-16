@@ -1,8 +1,9 @@
+import groovy.lang.Closure
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.compose.compiler)
-    alias(libs.plugins.google.services)
 }
 
 android {
@@ -26,6 +27,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
 
@@ -43,15 +45,13 @@ dependencies {
     implementation(platform(libs.compose.bom))
     implementation(libs.compose.activity)
     implementation(libs.compose.material3)
-    // Firebase
-    implementation(platform(libs.firebase.bom))
+    // AndroidX Credentials
+    implementation(libs.androidx.credentials)
+    implementation(libs.androidx.credentials.auth)
+    // Google Identity
+    implementation(libs.google.identity)
     // Modules
     implementation(projects.styleSystem)
     implementation(projects.navigation)
-    implementation(projects.sdk.firebase)
-
-    implementation(libs.firebase.auth)
-    implementation("androidx.credentials:credentials:1.5.0-alpha05")
-    implementation("androidx.credentials:credentials-play-services-auth:1.5.0-alpha05")
-    implementation("com.google.android.libraries.identity.googleid:googleid:1.1.1")
+    implementation(projects.sdk.google)
 }
