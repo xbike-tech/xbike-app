@@ -26,8 +26,6 @@ import kotlinx.coroutines.launch
 import java.security.MessageDigest
 import java.util.UUID
 
-const val SERVER_CLIENT_ID = ""
-
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,7 +62,7 @@ class MainActivity : ComponentActivity() {
 
             val googleIdOption: GetGoogleIdOption = GetGoogleIdOption.Builder()
                 .setFilterByAuthorizedAccounts(false)
-                .setServerClientId(SERVER_CLIENT_ID)
+                .setServerClientId(BuildConfig.GOOGLE_AUTH_SERVER_CLIENT_ID)
                 .setNonce(hashedNonce) // Provide the nonce if you have one
                 .build()
 

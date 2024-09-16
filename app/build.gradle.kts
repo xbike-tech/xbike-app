@@ -1,4 +1,5 @@
-import groovy.lang.Closure
+import java.io.FileInputStream
+import java.util.Properties
 
 plugins {
     alias(libs.plugins.android.application)
@@ -10,6 +11,11 @@ android {
     namespace = "com.sliderzxc.xbike"
     compileSdk = libs.versions.compileSdk.get().toInt()
 
+    val secretPropertiesFile = rootProject.file("secret.properties")
+    val secretProperties = Properties()
+    secretProperties.load(FileInputStream(secretPropertiesFile))
+
+
     defaultConfig {
         applicationId = "com.sliderzxc.xbike"
         minSdk = libs.versions.minSdk.get().toInt()
@@ -18,6 +24,8 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "GOOGLE_AUTH_SERVER_CLIENT_ID", secretProperties.getProperty("GOOGLE_AUTH_SERVER_CLIENT_ID"))
     }
 
     buildTypes {
@@ -37,7 +45,11 @@ android {
     }
 
     kotlinOptions.jvmTarget = "21"
-    buildFeatures.compose = true
+
+    buildFeatures {
+        compose = true
+        buildConfig = true
+    }
 }
 
 dependencies {
