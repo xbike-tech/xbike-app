@@ -41,4 +41,5 @@ include(
 
 include(
     ":feature:auth:domain",
+    ":feature:auth:data",
 )
