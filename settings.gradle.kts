@@ -31,9 +31,14 @@ include(
 )
 
 include(
-    ":foundation:mvi"
+    ":foundation:mvi",
 )
+include(":foundation:exception-handling")
 
 include(
     ":feature:splash:presentation",
+)
+
+include(
+    ":feature:auth:domain",
 )
