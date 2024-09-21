@@ -17,7 +17,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "XBIKE"
+rootProject.name = "xbike-app"
 
 includeBuild("build-conventions")
 
